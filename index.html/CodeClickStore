@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeClickStore | Sites que vendem para negócios locais</title>
+  <meta name="description" content="Criamos sites, landing pages e lojas virtuais para negócios locais. Peça seu orçamento grátis.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --bg-2: #111827;
+      --card: #151c2e;
+      --accent: #22d3ee;
+      --accent-2: #6366f1;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+    section { padding: 5rem 0; }
+    .navbar { background: rgba(11,15,26,.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .navbar-brand { font-weight: 800; color: #fff !important; letter-spacing: -.5px; }
+    .navbar-brand span { color: var(--accent); }
+    .btn-cta {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #06101a; font-weight: 700; border: 0; padding: .9rem 1.8rem; border-radius: 12px;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(34,211,238,.25); color: #06101a; }
+    .hero { padding: 9rem 0 6rem; background: radial-gradient(circle at 70% 20%, rgba(99,102,241,.25), transparent 50%), radial-gradient(circle at 10% 80%, rgba(34,211,238,.15), transparent 45%); }
+    .hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; letter-spacing: -1px; }
+    .hero h1 em { font-style: normal; background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead-muted { color: var(--muted); font-size: 1.15rem; }
+    .badges span { display: inline-block; margin: .25rem .5rem .25rem 0; padding: .35rem .8rem; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; font-size: .85rem; color: var(--muted); }
+    .alt { background: var(--bg-2); }
+    h2.title { font-weight: 800; letter-spacing: -.5px; }
+    .box { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 1.8rem; height: 100%; }
+    .box.problem { border-top: 3px solid #f87171; }
+    .box.solution { border-top: 3px solid #34d399; }
+    .box ul { padding-left: 0; list-style: none; margin: 0; }
+    .box li { padding: .6rem 0; border-bottom: 1px dashed rgba(255,255,255,.08); color: var(--text); }
+    .box li:last-child { border-bottom: 0; }
+    .niche { transition: transform .2s, border-color .2s; }
+    .niche:hover { transform: translateY(-6px); border-color: var(--accent); }
+    .niche .icon { font-size: 2.4rem; }
+    .step-num { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #06101a; margin-bottom: 1rem; }
+    .form-control, .form-select { background: #0e1424; border: 1px solid rgba(255,255,255,.12); color: var(--text); padding: .7rem .9rem; }
+    .form-control:focus, .form-select:focus { background: #0e1424; color: var(--text); border-color: var(--accent); box-shadow: 0 0 0 .2rem rgba(34,211,238,.15); }
+    .form-control::placeholder { color: #6b7280; }
+    .form-label { font-weight: 600; font-size: .9rem; }
+    .form-select option { background: #0e1424; }
+    .form-card { background: var(--card); border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 2.2rem; }
+    #agradecimento { display: none; }
+    footer { padding: 2rem 0; border-top: 1px solid rgba(255,255,255,.06); color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#topo">Code<span>Click</span>Store</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-md-center gap-md-3">
+          <li class="nav-item"><a class="nav-link text-light" href="#solucao">Solução</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#nichos">Para quem é</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#como-funciona">Como funciona</a></li>
+          <li class="nav-item"><a class="btn btn-cta btn-sm px-3 py-2" href="#contato">Orçamento grátis</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="topo">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Seu negócio merece um site que <em>vende</em>, não só um site bonito.</h1>
+          <p class="lead-muted mt-4">
+            A CodeClickStore cria sites, landing pages e lojas virtuais para negócios locais de todos os segmentos.
+            Mais clientes, mais pedidos e mais profissionalismo, sem depender de rede social.
+          </p>
+          <div class="mt-4 d-flex flex-wrap align-items-center gap-3">
+            <a href="#contato" class="btn btn-cta btn-lg">Quero meu orçamento grátis</a>
+          </div>
+          <div class="badges mt-4">
+            <span>⚡ Sites rápidos</span>
+            <span>📱 Feitos para celular</span>
+            <span>🛒 Prontos para vender desde o primeiro dia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="solucao" class="alt">
+    <div class="container">
+      <h2 class="title text-center mb-5">Sem um site profissional, você paga caro por vendas que já eram suas.</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="box problem">
+            <h4 class="mb-3">😤 O problema</h4>
+            <ul>
+              <li><strong>Vendas perdidas no direct:</strong> o cliente pergunta o preço, ninguém responde a tempo e ele compra do concorrente.</li>
+              <li><strong>Taxas abusivas de delivery:</strong> parte de cada pedido fica com o aplicativo e o lucro some.</li>
+              <li><strong>Agenda bagunçada:</strong> horários no caderno, faltas sem aviso e tempo perdido confirmando cliente.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box solution">
+            <h4 class="mb-3">🚀 A solução</h4>
+            <p>
+              A CodeClickStore entrega um site próprio que trabalha por você 24 horas por dia.
+              O cliente vê seus produtos ou serviços, escolhe e fecha na hora: compra, agenda ou pede,
+              tudo sem depender de ninguém para responder mensagem.
+            </p>
+            <p class="mb-0 fw-bold" style="color: var(--accent);">Menos tempo no atendimento, mais tempo (e dinheiro) no caixa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="nichos">
+    <div class="container">
+      <h2 class="title text-center mb-2">Feito sob medida para o seu tipo de negócio</h2>
+      <p class="text-center lead-muted mb-5">Cada segmento tem uma necessidade. Criamos o site pensando na sua.</p>
+      <div class="row g-4">
+        <div class="col-md-4 order-last">
+          <div class="box niche">
+            <div class="icon mb-2">👗</div>
+            <h4>Lojas de roupas e acessórios</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Vitrine aberta o dia todo.</strong>
+              Loja virtual com catálogo, carrinho e pagamento online. Você vende para o bairro e para a cidade toda, sem depender de rede social.</p>
+          </div>
+        </div>
+        <div class="col-md-4 order-last">
+          <div class="box niche">
+            <div class="icon mb-2">💅</div>
+            <h4>Salões e clínicas de estética</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Agendamento online e imagem premium.</strong>
+              Mostre seus serviços, antes e depois e valores, e deixe o cliente marcar o horário sozinho.</p>
+          </div>
+        </div>
+        <div class="col-md-4 order-last">
+          <div class="box niche">
+            <div class="icon mb-2">🏋️</div>
+            <h4>Academias e personal trainers</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Mais matrículas.</strong>
+              Página com planos, horários e aula experimental, feita para transformar visitante em aluno.</p>
+          </div>
+        </div>
+        <div class="col-md-4 order-last">
+          <div class="box niche">
+            <div class="icon mb-2">🔧</div>
+            <h4>Oficinas e serviços automotivos</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Confiança antes da visita.</strong>
+              Serviços, localização e pedido de orçamento online, para o cliente escolher você e não o concorrente.</p>
+          </div>
+        </div>
+        <div class="col-md-4 order-last">
+          <div class="box niche">
+            <div class="icon mb-2">🐶</div>
+            <h4>Pet shops e clínicas veterinárias</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Banho, tosa e consulta marcados no site.</strong>
+              Agenda online e catálogo de produtos para o tutor resolver tudo em poucos cliques.</p>
+          </div>
+        </div>
+        <div class="col-md-4 order-last">
+          <div class="box niche" style="border-color: var(--accent);">
+            <div class="icon mb-2">💼</div>
+            <h4>O seu negócio é outro?</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Criamos para qualquer segmento.</strong>
+              Consultórios, escritórios, lojas, serviços e mais. Conte sobre o seu e montamos a solução ideal.</p>
+            <a href="#contato" class="fw-bold text-decoration-none" style="color: var(--accent);">Pedir orçamento →</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box niche">
+            <div class="icon mb-2">📱</div>
+            <h4>Lojas de iPhone</h4>
+            <p class="text-secondary-emphasis" style="color: var(--muted) !important;"><strong style="color: var(--text);">Credibilidade que vende.</strong>
+              Quem vai pagar vários mil reais num aparelho quer segurança. Criamos um site com catálogo organizado,
+              fotos profissionais, garantia em destaque e prova social. O cliente confia antes mesmo de entrar na loja.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box niche">
+            <div class="icon mb-2">✂️</div>
+            <h4>Barbearias</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Agenda cheia sem esforço.</strong>
+              Chega de marcar horário na mão. Seu cliente escolhe o barbeiro, o serviço e o horário direto no site,
+              e a agenda se organiza sozinha. Menos furo, menos confusão e mais cortes por dia.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box niche">
+            <div class="icon mb-2">🍔</div>
+            <h4>Hamburguerias</h4>
+            <p style="color: var(--muted);"><strong style="color: var(--text);">Delivery próprio, sem taxas.</strong>
+              Cardápio digital com pedido online e pagamento integrado. Você fica com o lucro que hoje vai para os
+              aplicativos e constrói sua própria base de clientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="alt">
+    <div class="container">
+      <h2 class="title text-center mb-5">Do primeiro contato ao site no ar em 3 passos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="box">
+            <div class="step-num">1</div>
+            <h5>Peça seu orçamento</h5>
+            <p style="color: var(--muted);" class="mb-0">Preencha o formulário em 1 minuto contando sobre seu negócio e o que você quer vender. Retornamos por e-mail com a proposta.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="step-num">2</div>
+            <h5>Criamos o seu site</h5>
+            <p style="color: var(--muted);" class="mb-0">Cuidamos do design, dos textos e de toda a parte técnica. Você acompanha o andamento e aprova antes de ir ao ar.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="step-num">3</div>
+            <h5>Entrega das chaves</h5>
+            <p style="color: var(--muted);" class="mb-0">Seu site entra no ar pronto para receber clientes. Você recebe um treinamento rápido para usar tudo com tranquilidade.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#contato" class="btn btn-cta btn-lg">Começar meu projeto agora</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-4">
+            <h2 class="title">Peça seu orçamento, sem compromisso</h2>
+            <p class="lead-muted">Responda em 1 minuto e retornamos por e-mail com uma proposta personalizada.</p>
+          </div>
+
+          <div class="form-card">
+
+            <form id="formOrcamento" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="nome">Nome completo *</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="email">E-mail *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="telefone">Telefone (opcional)</label>
+                  <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(82) 90000-0000">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="negocio">Nome do seu negócio *</label>
+                  <input type="text" class="form-control" id="negocio" name="negocio" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="tipo">Tipo de negócio *</label>
+                  <select class="form-select" id="tipo" name="tipo_negocio" required>
+                    <option value="" selected disabled>Selecione...</option>
+                    <option>Loja de iPhone / eletrônicos</option>
+                    <option>Barbearia</option>
+                    <option>Hamburgueria / Delivery</option>
+                    <option>Loja de roupas / acessórios</option>
+                    <option>Salão / Clínica de estética</option>
+                    <option>Academia / Personal</option>
+                    <option>Oficina / Serviços automotivos</option>
+                    <option>Pet shop / Veterinária</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="precisa">O que você precisa? *</label>
+                  <select class="form-select" id="precisa" name="necessidade" required>
+                    <option value="" selected disabled>Selecione...</option>
+                    <option>Site institucional</option>
+                    <option>Landing page</option>
+                    <option>Loja virtual</option>
+                    <option>Não sei ainda</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="atual">Já tem site ou Instagram? (cole o link)</label>
+                  <input type="text" class="form-control" id="atual" name="link_atual" placeholder="https://...">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="investimento">Faixa de investimento</label>
+                  <select class="form-select" id="investimento" name="investimento">
+                    <option value="" selected disabled>Selecione...</option>
+                    <option>Até R$ 1.000</option>
+                    <option>R$ 1.000 a R$ 3.000</option>
+                    <option>Acima de R$ 3.000</option>
+                    <option>Prefiro conversar</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="prazo">Prazo desejado</label>
+                  <select class="form-select" id="prazo" name="prazo">
+                    <option value="" selected disabled>Selecione...</option>
+                    <option>Urgente</option>
+                    <option>Até 30 dias</option>
+                    <option>Sem pressa</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="mensagem">Conte rapidamente sobre o projeto</label>
+                  <textarea class="form-control" id="mensagem" name="mensagem" rows="4"></textarea>
+                </div>
+
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <input type="hidden" name="_subject" value="Novo pedido de orçamento - CodeClickStore">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="col-12 text-center mt-3">
+                  <button type="submit" class="btn btn-cta btn-lg w-100">Enviar e receber meu orçamento</button>
+                  <p class="small mt-3 mb-0" style="color: var(--muted);">🔒 Seus dados são usados só para o seu orçamento. Respondemos em até 24h úteis.</p>
+                </div>
+              </div>
+            </form>
+
+            <div id="agradecimento" class="text-center py-4">
+              <div style="font-size: 3rem;">✅</div>
+              <h3 class="mt-2">Recebemos seu pedido!</h3>
+              <p style="color: var(--muted);" class="mb-0">Você receberá a proposta no e-mail informado em até 24h úteis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <div>© <span id="ano"></span> CodeClickStore. Todos os direitos reservados.</div>
+      <div>Sites que vendem para negócios locais.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    const EMAIL_DESTINO = 'codeclickstore@gmail.com';
+
+    const form = document.getElementById('formOrcamento');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        form.reportValidity();
+        return;
+      }
+      if (EMAIL_DESTINO.startsWith('COLOQUE_')) {
+        alert('Configuração pendente: defina o e-mail de destino (EMAIL_DESTINO) no final do arquivo index.html.');
+        return;
+      }
+      const botao = form.querySelector('button[type="submit"]');
+      botao.disabled = true;
+      botao.textContent = 'Enviando...';
+      try {
+        const resp = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(EMAIL_DESTINO), {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        const dados = await resp.json().catch(() => ({}));
+        if (!resp.ok || dados.success === 'false' || dados.success === false) {
+          throw new Error(dados.message || 'Falha no envio');
+        }
+        form.style.display = 'none';
+        document.getElementById('agradecimento').style.display = 'block';
+      } catch (err) {
+        botao.disabled = false;
+        botao.textContent = 'Enviar e receber meu orçamento';
+        alert('Não foi possível enviar agora. Tente novamente em instantes.');
+      }
+    });
+  </script>
+</body>
+</html>
