@@ -29,6 +29,19 @@
       transition: transform .15s, box-shadow .15s;
     }
     .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(34,211,238,.25); color: #06101a; }
+    .btn-whats {
+      background: #25d366; color: #06101a; font-weight: 700; border: 0; padding: .9rem 1.8rem; border-radius: 12px;
+      transition: transform .15s, box-shadow .15s; text-decoration: none; display: inline-block;
+    }
+    .btn-whats:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,211,102,.3); color: #06101a; }
+    .whatsapp-float {
+      position: fixed; bottom: 20px; right: 20px; z-index: 1050;
+      background: #25d366; color: #06101a; font-weight: 700;
+      padding: .8rem 1.3rem; border-radius: 999px; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,.4);
+      transition: transform .15s;
+    }
+    .whatsapp-float:hover { color: #06101a; transform: translateY(-2px); }
     .hero { padding: 9rem 0 6rem; background: radial-gradient(circle at 70% 20%, rgba(99,102,241,.25), transparent 50%), radial-gradient(circle at 10% 80%, rgba(34,211,238,.15), transparent 45%); }
     .hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; letter-spacing: -1px; }
     .hero h1 em { font-style: normal; background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -86,6 +99,7 @@
           </p>
           <div class="mt-4 d-flex flex-wrap align-items-center gap-3">
             <a href="#contato" class="btn btn-cta btn-lg">Quero meu orçamento grátis</a>
+            <a href="https://wa.me/5582999097696?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20CodeClickStore%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn-whats btn-lg">💬 Chamar no WhatsApp</a>
           </div>
           <div class="badges mt-4">
             <span>⚡ Sites rápidos</span>
@@ -249,6 +263,7 @@
           <div class="text-center mb-4">
             <h2 class="title">Peça seu orçamento, sem compromisso</h2>
             <p class="lead-muted">Responda em 1 minuto e retornamos por e-mail com uma proposta personalizada.</p>
+            <a href="https://wa.me/5582999097696?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20CodeClickStore%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn-whats">💬 Prefere falar direto? Chame no WhatsApp</a>
           </div>
 
           <div class="form-card">
@@ -349,9 +364,17 @@
   <footer>
     <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
       <div>© <span id="ano"></span> CodeClickStore. Todos os direitos reservados.</div>
-      <div>Sites que vendem para negócios locais.</div>
+      <div>
+        WhatsApp:
+        <a href="https://wa.me/5582999097696" target="_blank" rel="noopener" class="text-decoration-none" style="color: var(--accent);">(82) 99909-7696</a>
+      </div>
     </div>
   </footer>
+
+  <a class="whatsapp-float" target="_blank" rel="noopener"
+     href="https://wa.me/5582999097696?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20CodeClickStore%20e%20quero%20um%20or%C3%A7amento.">
+    💬 Falar no WhatsApp
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
